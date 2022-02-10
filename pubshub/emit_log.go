@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
 	"os"
 
 	"github.com/pkg/errors"
@@ -8,6 +10,11 @@ import (
 )
 
 func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("write your message =")
+
+	mPayload, _ := reader.ReadString('\n')
+
 	// conn, err := amqp091.Dial("amqp://guest:guest@localhost:15672")
 	conn, err := amqp091.Dial("amqp://rabbitAdmin:B4yAr1nD123@34.101.130.110:5672/")
 
@@ -33,7 +40,7 @@ func main() {
 
 	err = ch.Publish("logs", "", false, false, amqp091.Publishing{
 		ContentType: "text/plain",
-		Body:        []byte(os.Args[1]),
+		Body:        []byte(mPayload),
 	})
 
 }
