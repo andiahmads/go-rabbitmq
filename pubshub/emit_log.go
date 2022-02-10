@@ -24,9 +24,7 @@ func main() {
 	for true {
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("write your message: ")
-
 		mPayload, _ := reader.ReadString('\n')
-
 		conn, err := amqp091.Dial("amqp://guest:guest@localhost:15672")
 
 		if err != nil {
