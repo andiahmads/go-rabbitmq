@@ -14,7 +14,7 @@ $ cd /pubshub
 ```
 
 
-# run app & split your terminal
+## run app & split your terminal
 
 ```sh
 $ go run emit_log.go
