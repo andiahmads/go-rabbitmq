@@ -16,8 +16,7 @@ func main() {
 
 		mPayload, _ := reader.ReadString('\n')
 
-		// conn, err := amqp091.Dial("amqp://guest:guest@localhost:15672")
-		conn, err := amqp091.Dial("amqp://rabbitAdmin:B4yAr1nD123@34.101.130.110:5672/")
+		conn, err := amqp091.Dial("amqp://userexample:pasexample@portexample:5672/")
 
 		if err != nil {
 			panic(errors.Wrap(err, "failed to connect to rabbitmq server"))
