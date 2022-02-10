@@ -14,17 +14,16 @@ $ cd /pubshub
 ```
 
 
-# run sennder
+# run app & split your terminal
 
 ```sh
 $ go run emit_log.go
 
-```
-
-
-# run receiver
-
-```sh
 $ go run receive.go
 
 ```
+
+
+
+
+
